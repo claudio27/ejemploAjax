@@ -19,7 +19,7 @@ class Nuevo extends CI_Controller {
 	{
 		echo "Hola ".$nom. "¿Como estas?";
 	}
-
+	// entrega el valor pedido en formato JSON
 	 function recuperaActores(){
 
 		     $data['query'] = $this->Testmodel->get_actors();
