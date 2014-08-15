@@ -11,13 +11,14 @@ class Nuevo extends CI_Controller {
 
 	public function index()
 	{
-	$this->load->view('inicio');
+	$data['query'] = $this->Testmodel->get_actors();
+	$this->load->view('inicio',$data);
 
 	}
 
-	 function hola($nom)
+	 function hola()
 	{
-		echo "Hola ".$nom. "¿Como estas?";
+		$this->load->view('home');
 	}
 	// entrega el valor pedido en formato JSON
 	 function recuperaActores(){
